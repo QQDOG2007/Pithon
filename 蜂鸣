@@ -1,0 +1,23 @@
+import PRi.GPIO as gpio
+import time
+gpio. stemode (gpio.BOARD)
+gpio. setup (12,gpio.OUT)
+gpio. output(12,gpio.HIGH)
+number = "123456789"
+word=raw_input("Please enter your number：")
+tries = 2
+if word == number:
+    print "next "
+else:
+    tries = 2-1
+    word = raw_input("wrong number please enter you number again: ")
+    gpio.output(12,gpio.LOW)
+    time.sleep(0.5)
+    gpio.cleanup()
+password ="STEM"
+word =raw_input("Please enter your password：")
+if word == password:
+    print "you have 1000000 dollars."
+else:
+    print "wrong password."
+gpio.cleanup()
