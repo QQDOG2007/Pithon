@@ -1,0 +1,7 @@
+import turtle
+t= turtle.Pen()
+t.color("purple")
+t.width(0.1)
+for i in range(1000):
+    t.forward(1*i)
+    t.right(91)
