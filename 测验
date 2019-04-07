@@ -1,0 +1,38 @@
+import RPi.GPIO as gpio
+import time
+	
+gpio.setmode(gpio.BOARD)
+gpio.setup(7,gpio.OUT) 
+gpio.setup(13,gpio.OUT)
+gpio.setup(15,gpio.IN)
+gpio. setup (12,gpio.OUT)
+gpio. output(12,gpio.HIGH)
+l = gpio.PWM(7,100)
+gpio.setwarnings(False)
+
+def ():
+    print("测量中......")
+    while i !=10:
+        time.sleep(0.3)
+        gpio.output(13, True)
+        time.sleep(0.00001)
+        gpio.output(13,False)
+    while gpio.input(15) == False:
+        pass
+    t1 = time.time()
+    while gpio.input(15) == True:
+        pass
+    l = gpio.PWM(7,100)
+l.start(1)
+	
+"""This loop lets the LED breathe"""
+for i in range (5):
+    for i in range(1,100):
+        l.ChangeDutyCycle(i)
+        time.sleep(0.01)
+	
+    for i in range(100,1,-1):
+        l.ChangeDutyCycle(i)
+        time.sleep(0.01)
+        gpio.output(12,gpio.LOW)
+        gpio.cleanup()
