@@ -4,11 +4,9 @@ import time
 gpio.setmode(gpio.BOARD)
 gpio.setup(13,gpio.OUT)
 gpio.setup(15,gpio.IN)
-i=0
-t=0
-def ():
+def see(frequency):
     print("测量中......")
-    while i !=10:
+    while 1+1==2
         time.sleep(0.3)
         gpio.output(13, True)
         time.sleep(0.00001)
@@ -19,11 +17,19 @@ def ():
     while gpio.input(15) == True:
         pass
     t2 = time.time()
-    a = (t2-t1) * 34000 / 2
-    t = t+a
-    i=i+1
-d = t/10
-print"你要测量的距离为 ", d," cm"
-raw_input()
-for def in range (10) 
+    frequency = (t2-t1) * 34000 / 2
+line1 = [ a b c d e f g h i j ]
+for i in line1:
+    see(i)
+    see(i)
+    see(i)
+    see(i)
+    see(i)
+    see(i)
+    see(i)
+    see(i)
+    see(i)
+    see(i)
+(a+b+c+d+e+f+g+h+i+j) / 10=XXX
+print,XXX"cm"
 gpio.cleanup()
