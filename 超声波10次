@@ -20,6 +20,7 @@ def see(frequency):
     frequency = (t2-t1) * 34000 / 2
 line1 = [ a b c d e f g h i j ]
 for i in line1:
+    time.sleep(1)
     see(i)
     see(i)
     see(i)
